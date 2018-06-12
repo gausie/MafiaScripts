@@ -282,7 +282,7 @@ void ReadSettings()
     item gingerWine = ToItem("high-end ginger wine"); // from gingertown
     item turkey = ToItem("Ambitious Turkey"); // from hand turkey
     item sacramento = ToItem("Sacramento wine"); // from witchess
-    effect sacramentoEffect = ToEffect("Sacré Mental");
+    effect sacramentoEffect = ToEffect("SacrÃ© Mental");
     item pinkyRing = ToItem("mafia pinky ring"); // increases adventure yield from wine
     effect beerPolka = ToEffect("Beer Barrel Polka"); // increases adventure yield for up to 10 drunk, but only once a day
 
@@ -453,7 +453,7 @@ void ReadSettings()
     skill annoyance = ToSkill("Ur-Kel's Aria of Annoyance");
     effect annoyanceEffect = ToEffect("Ur-Kel's Aria of Annoyance");
     item greekFire = ToItem("Greek fire");
-    effect greekFireEffect = ToEffect("Sweetbreads Flambé");
+    effect greekFireEffect = ToEffect("Sweetbreads FlambÃ©");
 
 // running away
     skill cleesh = ToSkill("Cleesh");
@@ -464,8 +464,8 @@ void ReadSettings()
 // Skills for more turns
     skill odeToBooze = ToSkill("The Ode to Booze");
     effect odeToBoozeEffect = ToEffect("Ode to Booze"); //
-    //item songSpaceAcc = ToItem("La Hebilla del Cintur�n de Lopez");
-    item songSpaceAcc = ToItem("La Hebilla del Cinturón de Lopez");
+    //item songSpaceAcc = ToItem("La Hebilla del Cinturón de Lopez");
+    item songSpaceAcc = ToItem("La Hebilla del CinturÃ³n de Lopez");
     skill calcUniverse = ToSkill("Calculate the Universe");
 
 // skills for +meat bonus
@@ -514,8 +514,8 @@ void ReadSettings()
     item dice = ToItem("Glenn's golden dice"); // once a day random buffs
     item pantsGiving = ToItem("Pantsgiving"); // wear for combat skills, fullnes reduction
     item gameToken = ToItem("defective Game Grid token"); // once a day activate for 5 turns of +5 everything
-    item chibiOff = ToItem("ChibiBuddy™ (off)"); // once a day activate for 5 turns of +5 familiar weight
-    item chibiOn = ToItem("ChibiBuddy™ (on)"); // once a day activate for 5 turns of +5 familiar weight
+    item chibiOff = ToItem("ChibiBuddyâ¢ (off)"); // once a day activate for 5 turns of +5 familiar weight
+    item chibiOn = ToItem("ChibiBuddyâ¢ (on)"); // once a day activate for 5 turns of +5 familiar weight
     item mumming = ToItem("mumming trunk"); // cast +meat or +item on familiar
 
 // 2 day items for +meat bonus
@@ -577,7 +577,7 @@ void ReadSettings()
     effect empathyEffect = ToEffect("Empathy");
     effect petBuffEffect = ToEffect("Heavy Petting");
     effect kinderEffect = ToEffect("Kindly Resolve");
-    effect chibiEffect = ToEffect("ChibiChanged™");
+    effect chibiEffect = ToEffect("ChibiChangedâ¢");
 
 // skills to activate Bag O' Tricks
     skill mortarShell = ToSkill("Stuffed Mortar Shell"); // this one is special because it has a one turn delay
@@ -719,7 +719,7 @@ void ReadSettings()
     item homophones = ToItem("staph of homophones"); // changes words to their homophones
     item prepositions = ToItem("sword behind inappropriate prepositions"); // restructures sentences
     item papier1 = ToItem("Papier mitre"); // inserts random words into sentences
-    item papier2 = ToItem("Papier-mâchuridars"); // inserts random words into sentences
+    item papier2 = ToItem("Papier-mÃ¢churidars"); // inserts random words into sentences
     item papier3 = ToItem("papier-masque"); // inserts random words into sentences
     effect disAbled = ToEffect("Dis Abled"); // turns everything into rhymes
     effect anapests = ToEffect("Just the Best Anapests"); // turns everything into rhymes
@@ -4602,7 +4602,7 @@ print("Running filter = " + result, printColor);
         {
             if (get_property("_kgbClicksUsed").to_int() > kgbClickLimit) // not enough clicks left, skipping
                 return;
-            cli_execute("briefcase b " + keyword);
+            cli_execute("Briefcase b " + keyword);
             if (effectTurns == kgbBuff.have_effect())
             {
                 print("KGB buff failed, is Ezandora's briefcase script installed?  Are you out of clicks for the day?", "red");
@@ -4619,7 +4619,7 @@ print("Running filter = " + result, printColor);
         if (get_property("_kgbClicksUsed").to_int() > kgbClickLimit) // not enough clicks left, skipping
             return;
         // code to control briefcase is too complex, we depend on Ezandora's briefcase script
-        cli_execute("briefcase martinis"); // make sure to get martinis first
+        cli_execute("Briefcase martinis"); // make sure to get martinis first
         KGBBuff(turns, kgbMeat, "meat");
         KGBBuff(turns, kgbItems, "item"); // any leftover clicks after done buffing +meat go to +item
     }
